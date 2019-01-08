@@ -61,3 +61,13 @@ $ time curl "http://${IP_ADDRESS?}?name=yourname"
 ```
 kubectl -n fission-function get hpa -w
 ```
+
+## Create another function and schedule it to run every minute
+```
+$ fission function create --name hello \
+                          --env python \
+                          --code app.py \
+                          --entrypoint main
+$ fission tt create --name minute --function hello --cron "@every 1m"
+```
+
