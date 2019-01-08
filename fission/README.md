@@ -2,7 +2,7 @@
 
 ## Pre-reqs
 * Kube cluster with fission installed
-* Python 3, kubectl and fission installed locally
+* Python 3, kubectl and fission CLI installed locally
 
 ## Deploy to fission by creating a spec and applying
 ```
