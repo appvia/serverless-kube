@@ -18,7 +18,7 @@ Note - Troubleshooting logs are found on the kubeless-function-controller contai
 
 ## Call the function from the CLI
 ```
-$ kubeless function call hello-you --data 'Hello world!'
+$ kubeless function call hello-you
 ```
 
 ## Check the function logs
@@ -26,7 +26,19 @@ $ kubeless function call hello-you --data 'Hello world!'
 $ kubeless function logs hello-you
 ```
 
-## Expose using http via nginx ingress and send a test request
+## Expose using http via nginx ingress
 ```
 $ kubeless trigger http create hello-you --function-name hello-you --path hello --hostname example.com --gateway nginx
+```
+
+## Get the public IP of the ingress and send a request
+```
+$ export IP_ADDRESS=$(kubectl get ing -o=jsonpath='{..ip}')
+$ curl -H 'Host: example.com' http://${IP_ADDRESS}/hello?name=yourname
+```
+
+## Schedule a function to run every minute
+```
+$ kubeless function deploy cron --runtime python3.7 --handler cron.main -f cron.py  --schedule '* * * * *'
+$ kubeless trigger cronjob ls
 ```

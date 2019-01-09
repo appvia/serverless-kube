@@ -16,3 +16,5 @@ See the README's within each frameworks directory.
 * Fn
 * Openwhisk
 * Event based example functions for each framework e.g. cron/kafka/kube events etc
+* Monitoring, logging, metrics
+* CI/CD options
