@@ -7,6 +7,7 @@ This repo contains a simple app and steps for deploying it to several popular se
 * [Fission](https://github.com/fission/fission)
 * [Knative](https://github.com/knative/)
 * [Kubeless](https://github.com/kubeless/kubeless)
+* [OpenFaas](https://www.openfaas.com/)
 * More to come...
 
 ## Usage
