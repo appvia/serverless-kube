@@ -16,8 +16,7 @@ $ cp handler.py ./hello-world/handler.py
 $ faas-cli build -f ./hello-you.yml
 ```
 
-## If you are using a remote kube cluster, tag and push the image to a remote registry so it can be pulled on deploy
-
+## If you are using a remote kube cluster, tag and push the image to a remote registry so it can be pulled on deploy (will require image pull secrets if authentication required)
 ```
 $ docker tag hello-you yourregistry/hello-you
 $ docker push yourregistry/hello-you
