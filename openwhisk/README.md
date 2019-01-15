@@ -20,7 +20,8 @@ $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/ma
 ## Deploy an action and invoke it
 ```
 $ wsk -i action create hello-you hello-you.py --kind python:3
-$ wsk -i action invoke --result hello-you --param name dan
+$ wsk -i action invoke --result hello-you --param name yourname
+$ wsk -i action list
 ```
 
 
