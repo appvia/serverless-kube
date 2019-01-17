@@ -1,0 +1,11 @@
+service: hello-you
+
+provider:
+  name: kubeless
+  runtime: python3.7
+
+plugins:
+  - serverless-kubeless
+functions:
+  hello-you:
+    handler: main.hello_you
