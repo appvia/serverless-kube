@@ -1,4 +1,5 @@
 # Template for deploying an app to openfaas
+[OpenFaas](https://www.openfaas.com/)
 
 ## Pre-reqs
 * Kube cluster with openfaas installed
