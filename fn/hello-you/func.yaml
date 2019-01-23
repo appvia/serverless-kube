@@ -1,0 +1,10 @@
+schema_version: 20180708
+name: hello-you
+version: 0.0.9
+runtime: python
+entrypoint: python3 func.py
+format: http-stream
+triggers:
+- name: hello-trigger
+  type: http
+  source: /hello
