@@ -9,13 +9,12 @@ This repo contains a simple app and steps for deploying it to several popular se
 * [Kubeless](https://github.com/kubeless/kubeless)
 * [OpenFaas](https://www.openfaas.com/)
 * [OpenWhisk](http://openwhisk.incubator.apache.org)
-* More to come...
+* [Fn](http://fnproject.io)
 
 ## Usage
 See the README's within each frameworks directory.
 
 ## TODO
-* Fn
 * Event based example functions for each framework e.g. cron/kafka/kube events etc
 * Monitoring, logging, metrics
 * CI/CD options
