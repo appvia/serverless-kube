@@ -1,6 +1,6 @@
 schema_version: 20180708
 name: hello-you
-version: 0.0.9
+version: 0.0.1
 runtime: python
 entrypoint: python3 func.py
 format: http-stream

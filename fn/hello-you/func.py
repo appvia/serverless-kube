@@ -3,16 +3,14 @@ import json
 
 
 def handler(ctx, data=None, loop=None):
-    print('Function invoked')
     name = 'anon'
     if data and len(data) > 0:
-        print(data)
         body = json.loads(data)
         try:
             name = body.get('name')
         except:
             print('Name not found')
-    return json.dumps(data)
+    return name
 
 
 if __name__ == '__main__':
