@@ -1,11 +1,22 @@
 service: hello-you
 
-provider:
-  name: kubeless
-  runtime: python3.7
+package:
+  exclude:
+    - .gitignore
+    - .git/**
+    - node_modules/**
+    - package.json
 
 plugins:
-  - serverless-kubeless
+  - serverless-google-cloudfunctions
+provider:
+  name: google
+  runtime: python37
+  project: ${opt:project}
+  credentials: ~/.gcloud/keyfile.json
+
 functions:
-  hello-you:
-    handler: main.hello_you
+  hello:
+    handler: hello_you
+    events:
+      - http: path
